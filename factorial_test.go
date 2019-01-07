@@ -1,4 +1,4 @@
-package main
+package factorial
 
 import (
 	"testing"
@@ -62,7 +62,7 @@ func TestFactorial(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		want, ok := factorial(tt.input)
+		want, ok := Factorial(tt.input)
 		if ok != tt.ok {
 			t.Fatalf("test \"%s\" expected 'ok' = %t, got %t 'result' = %d", tt.desc, tt.ok, ok, want)
 		}

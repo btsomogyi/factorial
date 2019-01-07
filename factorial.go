@@ -1,11 +1,14 @@
-package main
+// Package factorial implements scalable efficient uint factorial function
+package factorial
 
 import (
 	"math"
 	"math/bits"
 )
 
-func factorial(m uint) (result uint, ok bool) {
+// Factorial returns m! for any uint, with overflow indicator 'ok' (true =
+// correct output, false = overflow and zero return value).
+func Factorial(m uint) (result uint, ok bool) {
 	var floatResult float64
 	floatResult = math.Gamma(float64(m + 1))
 	var maxVal float64
